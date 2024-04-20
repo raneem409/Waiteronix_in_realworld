@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<launch>
+  <!-- Launch the odometry node -->
+  <node pkg="wheel_encoder" type="odom_node.py" name="odom_node" output="screen">
+  </node>
+
+  <!-- Launch the ticks generator node -->
+  <node pkg="wheel_encoder" type="try_with_event.py" name="ticks_publisher" output="screen">
+  </node>
+  
+ 
+  <param command="$(find xacro)/xacro '$(find wheel_encoder)/urdf/odom_baselink.xacro'" name="robot_description"/>
+  <node args="-param robot_description -urdf -model waiteronix11" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+
+</launch>
+
+
