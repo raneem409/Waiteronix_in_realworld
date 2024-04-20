@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+   <include file="$(find mpu)/mpu9250_ros_driver/launch/arduino.launch"/>
+   <include file="$(find freenect_launch)/launch/freenect.launch"/>
+   <include file="$(find rplidar_ros)/launch/rplidar_a1.launch"/>
+   <node name="rplidar_data" pkg="rplidar_ros" type="rplidarNodeClient"/>
+</launch>
