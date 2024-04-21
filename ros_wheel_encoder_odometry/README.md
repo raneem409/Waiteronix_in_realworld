@@ -2,7 +2,7 @@
 
 # Wheel Encoder and Odometry ROS Package
 
-This ROS package simulates wheel encoder ticks and calculates odometry for a differential drive robot.
+This ROS package receives wheel encoder ticks and calculates odometry for a differential drive robot.
 
 ## Description
 
